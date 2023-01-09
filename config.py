@@ -16,7 +16,8 @@ import subprocess
 
 # from typing import List  # noqa: F401
 
-from libqtile import hook, layout
+from libqtile import hook
+from libqtile import layout
 from libqtile.config import Group, Match
 
 # Local Files
@@ -103,3 +104,4 @@ def start_once():
 def dialogs(window):
     if(window.window.get_wm_type() == 'dialog' or window.window.get_wm_transient_for()):
         window.floating = True
+
