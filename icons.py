@@ -3,13 +3,13 @@
 
 
 # You can define a letter and its icon here
-group_icons = ["B   ",
-               "D  ",
-               "T  ",
-               "V  ",
-               "M  ",
-               "C  ",
-               "E  ",
-               "N  ",
+group_icons = ["   ",
+               "  ",
+               "  ",
+               "  ",
+               "  ",
+               "  ",
+               "  ",
+               "  ",
                ]
 
