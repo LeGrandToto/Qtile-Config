@@ -1,8 +1,21 @@
+import libqtile.core.manager
 from libqtile.command import lazy
+from libqtile.log_utils import logger
 # from libqtile.command_client import InteractiveCommandClient
 
 
 class Functions:
+
+    ##### MENU FUNCTIONS #####
+
+    @staticmethod
+    def open_main_menu():
+        @lazy.function
+        def __inner(qtile: libqtile.core.manager.Qtile):
+            qtile.cmd_spawn("dmenu_run -p 'Run: '")
+        
+        return __inner
+
 
     ##### MOVE WINDOW IN GROUPS #####
 
