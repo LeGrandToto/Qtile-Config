@@ -72,6 +72,7 @@ APPS = [
     ([MOD, ALT], "a", "pavucontrol"),
     ([MOD, ALT], "e", "vim -g .config/qtile/config.py"),
     ([MOD, ALT], "z", "zoom"),
+    ([MOD, ALT], "s", "spotify"),
 
     # Media hotkeys
     ([MOD],      "Up", "pulseaudio-ctl up 5"),
@@ -100,7 +101,7 @@ APPS = [
 
 CUSTOM_SPAWN_KEYS = [
     # PWA keys
-    ([MOD, ALT], "s", PWA.spotify()),
+    # ([MOD, ALT], "s", PWA.spotify()),
     ([MOD, ALT], "m", PWA.music()),
     ([MOD, ALT], "t", PWA.calendar()),
     ([MOD, ALT], "y", PWA.youtube()),
