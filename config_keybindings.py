@@ -67,11 +67,13 @@ APPS = [
     ([MOD, ALT], "o", "env LIBGL_ALWAYS_SOFTWARE=1 obs"),
     ([MOD, ALT], "v", "gvim"),
     ([MOD, ALT], "b", "brave"),
-    ([MOD, ALT], "c", "code"),
+    ([MOD, ALT], "c", "google-chrome-stable"),
+    ([MOD, ALT, SHIFT], "c", "google-chrome-stable --incognito"),
     ([MOD, ALT], "p", "pycharm"),
     ([MOD, ALT], "a", "pavucontrol"),
     ([MOD, ALT], "e", "vim -g .config/qtile/config.py"),
     ([MOD, ALT], "z", "zoom"),
+    ([MOD, ALT], "s", "spotify"),
 
     # Media hotkeys
     ([MOD],      "Up", "pulseaudio-ctl up 5"),
@@ -82,8 +84,9 @@ APPS = [
     ([ALTGR],    "space", "play-pause"),
    
     # Run "rofi-theme-selector" in terminal to select a theme
-    ([MOD], "space", 'rofi -modi "drun,power-menu:rofi-power-menu,run,window,ssh" -show drun -show-icons'),
-    
+    ([MOD], "space", 'rofi -modi "drun,power-menu:/home/marc/.local/bin/rofi-power-menu/rofi-power-menu,run,window,ssh" -show drun -show-icons'),
+    # ([MOD], "space", 'rofi -modi "drun,run,window,ssh" -show drun -show-icons'),
+ 
     # Screenshots
     ([],         "Print", "xfce4-screenshooter"),
     # Full screen screenshot
@@ -100,7 +103,7 @@ APPS = [
 
 CUSTOM_SPAWN_KEYS = [
     # PWA keys
-    ([MOD, ALT], "s", PWA.spotify()),
+    # ([MOD, ALT], "s", PWA.spotify()),
     ([MOD, ALT], "m", PWA.music()),
     ([MOD, ALT], "t", PWA.calendar()),
     ([MOD, ALT], "y", PWA.youtube()),

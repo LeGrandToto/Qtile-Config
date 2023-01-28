@@ -9,9 +9,12 @@ class CreateGroups:
         Return the groups of Qtile
         """
         #### First and last
-        groups = [Group(name, layout="max") if name == self.group_names[0]
-                  else Group(name, layout="floating")
-                  if name == self.group_names[-1] else Group(name, layout="monadtall")
-                  for name in self.group_names]
+        default_layout = "monadtall"
+        layout_lookup = {
+                    0: "floating",
+                    len(self.group_names) - 1: "floating"
+                }
+        groups = [Group(name, layout= layout_lookup.get(index, default_layout)) for index, name in enumerate(self.group_names)]
+
         return groups
 

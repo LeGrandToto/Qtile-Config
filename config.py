@@ -16,8 +16,9 @@ import subprocess
 
 # from typing import List  # noqa: F401
 
-from libqtile import hook, layout
-from libqtile.config import Group, Match
+from libqtile import hook
+from libqtile import layout
+from libqtile.config import Match
 
 # Local Files
 from keys.keybindings import Mouse,Keybindings
@@ -96,9 +97,11 @@ wmname = "LG3D"
 @hook.subscribe.startup_once
 def start_once():
     home = os.path.expanduser('~')
-    subprocess.call([home + '/.local/bin/autostart'])
+    # subprocess.call([home + '/.local/bin/autostart.sh'])
+    subprocess.call([home + '/.config/qtile/autostart.sh']) 
 
 @hook.subscribe.client_new
 def dialogs(window):
     if(window.window.get_wm_type() == 'dialog' or window.window.get_wm_transient_for()):
         window.floating = True
+

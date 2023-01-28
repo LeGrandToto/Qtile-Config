@@ -3,7 +3,7 @@ from libqtile.config import Click, Drag, Key
 from libqtile.lazy import lazy
 
 # Import the function that move the window to the next and prev group
-from functions import Functions, PWA
+from functions import Functions
 
 from config_keybindings import *
 
@@ -126,11 +126,9 @@ class Keybindings:
         Create bindings to move between groups
         """
         group_keys = []
-        for icon in group_names:
-            index = (icon[0]).lower()
-
-            group_keys += [Key([MOVEMENT_KEY, GROUPS_KEY], index, lazy.group[icon].toscreen()), Key(
-                [MOVEMENT_KEY, SWAP_GROUP_KEY], index, lazy.window.togroup(icon, switch_group=True))]
+        for index, icon in enumerate(group_names):
+            group_keys += [Key([MOVEMENT_KEY, GROUPS_KEY], str(index + 1), lazy.group[icon].toscreen()), Key(
+                [MOVEMENT_KEY, SWAP_GROUP_KEY], str(index + 1), lazy.window.togroup(icon, switch_group=True))]
 
         return group_keys        
         
@@ -140,12 +138,15 @@ class Keybindings:
         self.create_swap_keys()
         self.create_windows_keys()
         self.create_shutdown_keys()
+
         self.create_kill_keys()
         self.create_floating_keys()
         self.create_groups_keys()
 
         self.create_cmd_keys() 
         self.create_spawn_keys()
+
+        # self.keys.append(Key([MOD], "R", Functions.open_main_menu()))
 
         return self.keys
         

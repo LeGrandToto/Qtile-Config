@@ -5,7 +5,7 @@ class Layouts:
     def __init__(self):
         self.default = {
             "border_width": 2,
-            "margin": 8,
+            "margin": 4,
             "border_focus": "#668bd7",
             "border_normal": "1D2330"}
 
@@ -37,15 +37,15 @@ class Layouts:
                 vspace=3,
                 panel_width=200
             ),
-            # layout.Stack(num_stacks=2),
+            layout.Stack(num_stacks=2),
             # Try more layouts by unleashing below layouts.
-            # layout.Bsp(),
-            # layout.Columns(),
-            # layout.Matrix(),
-            # layout.MonadWide(**self.default),
-            # layout.RatioTile(),
-            # layout.Tile(),
-            # layout.VerticalTile(),
-            # layout.Zoomy(),
+            layout.Bsp(**self.default),
+            layout.Columns(**self.default),
+            layout.Matrix(**self.default),
+            layout.MonadWide(**self.default),
+            layout.RatioTile(**self.default),
+            layout.Tile(**self.default),
+            layout.VerticalTile(**self.default),
+            layout.Zoomy(**self.default),
         ]
         return layouts
