@@ -11,7 +11,7 @@ class CreateGroups:
         #### First and last
         default_layout = "monadtall"
         layout_lookup = {
-                    0: "floating",
+                    0: "max",
                     len(self.group_names) - 1: "floating"
                 }
         groups = [Group(name, layout= layout_lookup.get(index, default_layout)) for index, name in enumerate(self.group_names)]
