@@ -29,6 +29,11 @@ git clone git@github.com:jluttine/rofi-power-menu.git
 cp rofi-power-menu ~/.local/bin/
 ```
 
+And if you want to customise the rofi menu thurther:
+```
+https://github.com/adi1090x/rofi
+```
+
 The [xephyr](https://wiki.archlinux.org/index.php/Xephyr) package is for testing purposes.
 
 [Nitrogen](https://wiki.archlinux.org/index.php/nitrogen) help us to set a cool wallpaper since Qtile doesn't have a wallpaper manager by default.
