@@ -145,19 +145,6 @@ class MyWidgets:
                 background=self.colors[0],
                 disable_drag=True
             ),
-            widget.Prompt(
-                prompt= "Run: ",
-                font="Ubuntu Mono",
-                padding=10,
-                foreground=self.colors[3],
-                background=self.colors[1]
-            ),
-            widget.Sep(
-                linewidth=0,
-                padding=40,
-                foreground=self.colors[2],
-                background=self.colors[0]
-            ),
             widget.WindowName(
                 foreground=self.colors[6],
                 background=self.colors[0],
