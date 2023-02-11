@@ -127,7 +127,7 @@ class Keybindings:
         """
         group_keys = []
         for index, icon in enumerate(group_names):
-            group_keys += [Key([MOVEMENT_KEY, GROUPS_KEY], str(index + 1), lazy.group[icon].toscreen()), Key(
+            group_keys += [Key([MOVEMENT_KEY], str(index + 1), lazy.group[icon].toscreen()), Key(
                 [MOVEMENT_KEY, SWAP_GROUP_KEY], str(index + 1), lazy.window.togroup(icon, switch_group=True))]
 
         return group_keys        
